@@ -1,0 +1,32 @@
+1.The keyword import means that we get from another file\library the promotion to use her
+function and her advantage we will use it when we want to use function like random that all
+ready exist but not in our file
+2.
+3. it used to run blocks just if our program is the main program it is allowed to our program to
+run by itself but also friendly to other python programs how may want to import some
+functionality without having to run the code
+4.in python almost everything is object so with class we can create new kind of objects with
+unique attribute
+5. the first advantage is that in a big program when you use class instead vairble everything is
+more organize and easy to deal with the second thing because we have inheritance and
+polymorphism we can create new class it means new objects with similar behaver the third is
+classs support synamic dispatch mining the method called on an object is determined at runtime
+based on the actual type of the object
+6. attribute is one of the main things in opp it means to give to object describe to his action or
+what it is like for a car we can tell him to drive that action and we can show his color
+7.obgect of class it is object that represent the class it self and can you her methods
+8.constructot means a way to build object of any class destructor means that after I build object
+form a class I can delete it from the memory
+9. the self parameter is reference to the current object and give you the option to access
+variables that concted to the class
+10.inheritance give us option to make class that contain all the method from anther class but in
+them there is anther attribute that make them speshel from other
+11.it means many forms we will use it in case we have many object but they look like in the
+same name and same behaver but they are different so with polymorphism we can know
+exactly what object it is
+12 the main different between static and regular function is that with static I don’t need to call
+with object I can do this whit the class and we use it when we want to effect all the object that
+we make
+ENUMS
+1. Give you option to names varible to related constants
+2. it used to improve code readability and sefety
