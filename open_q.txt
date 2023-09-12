@@ -1,0 +1,11 @@
+1 because when we use function that we dont know how many varibals we need in there like when we need details of person and mybey 
+he dont know some and he dont have it so he put just what he know and if we create function with 5 varibals and he put only 4 it wont work
+2 when we use it we dont have spesific number of varibals in the function so we have list if we print it in the function it depends if we print
+(args) so we get tupple of all the varibals in the list args and if we print(*args) it will print the all the varibals regular
+3 when we use it we can pass number of varibals if we print it we get dict of name of varibals and their value
+4 args contain the varibals in tupple and kwargs contain the variblas in dict and yse we can use them both
+5,6 unpacking means that your function gets many varibals and you put one but this one is list or like this so if we use * it tell the function to take the argument 
+we put and un packing him to many varibals , packing is when we dont know how many varibals we need so we use in the function * and when we call the function
+with list it packing the list to many varibals
+
+
