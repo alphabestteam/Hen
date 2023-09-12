@@ -1,0 +1,15 @@
+1. List is a collection of variables which allow to add and remove from the collection after
+he declared we can restore many types of variables
+Tuples are collection like list but when you declared them you cant add or remove from
+them any more but the advantage of them that they are faster then lists
+Dictionary is collection that works with the idea key – value you can get variable by the
+name of his key they are more comfortable and the search in them is very fast
+So if you have data that you don’t going to add or remove from him you need to you
+tuples
+If you need to use the data and ordered him you list
+And if you have a lot of data and you need to search in him you dictionary
+2. To add variable to list we use append() method and for remove remove()
+method
+7. we could use function update({key:value}) or just write new key and it will be add for
+example my_list{} and after my_list[“color”] = “red”
+And for remove we use pop() method
