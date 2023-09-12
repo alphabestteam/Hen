@@ -1,0 +1,9 @@
+pdf 1
+    1 those function for overloading other function , 1 str,2 init ,3 eq, 4 abs
+    2 if we dont use str by defult the function repr will use
+    3 the eq will happen will check if they are eq in the memory 
+    4 it means to give the function more option to do thing more than what she suppose to do we use 
+    is when we need to add to function like = to eq between things it is not suppose to
+    5 c.i false becase in the memory it is not eq c.ii <point.Point object at (some number)> because it dont know
+    to go to value so he print what it is and where in the memory c.iii print error because + unspported to add between to point
+    
