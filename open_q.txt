@@ -1,0 +1,24 @@
+decorators
+    1 decorators are tools that give us option to use function in different behaviour or class and use 
+    function in function 
+    2 in python function are kind of objects so we can use them like regular arguments and we can use the 
+    variabls inside them
+    3 function pointer points to code so with the name of the function we can get the address
+    4 we need to use it in the function inside because it need to accepate some variabls form the out function
+    5 when we use @ in getter method
+iterators
+    1 iterator is  object the can contain a lot of values and can go on them by order
+    2 list dict tuples
+    3 if we use del on the object so we delete him , and in python everything is object so if we use it in 
+    object on one of his values this values will delete as well
+    4 we need to use __iter__ and __next__ function iter is like init but you need to add return in the end
+generators
+    1 give you option to make function that behaves like iterator and it works with keyword yield that works like return 
+    but yield saves the state of the function from the last call
+    2 because it make the function behaves like iterator so we can work with infinet data and dont need to keep it 
+    and also when we use generators the code is faster
+    3 because every time we call we create new generators
+    4 it works the same but yield saves the state of the function from the last call
+
+
+
