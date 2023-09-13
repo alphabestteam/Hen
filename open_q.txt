@@ -1,0 +1,22 @@
+threading 
+    1 threading are way to run our program like i can seprite couple of function to threads and each one of them do just his job
+    we need to use them if we want to run couple of function at the same time and we also can control when each of them finish 
+    like if i have account and i take mony and at the same time someone give me mony we cant allowed those to function to run at the
+    same time the calculation will be wrong
+    2 import threading
+    3 requests give ass option to send http requests we prefer to use this on socket it is faster 
+    5 to prevent conflict beetween threads we can locks one until another finish in quation 1 i give example 
+sockets
+    1 socket is give us option to connect two programs on differnet network one listen to server and the other connect to the first one
+    it used for if we have 2 nodes of different things that we want them to communicate with each other
+    no beause socket work whit tcp protocol so some packets can get lost so we can use http or ftp protocol
+    2 the socket connect to the server waitng to requests form the client the server has address and the client use it 
+    3 af_inet is the address sock_stream is the connection to the tcp protocol
+virtual environments
+    1 folder that contain all version or lyberyrs that we need to run out program we need it when we have 2 projects with the same modle but
+    different versions and we can only use one of the version or when we have a project with  a lot things that download to him and it complicated
+    to move the project to different environment 
+    2 we open new environment when not matter what we download or deleted or change it happen just there 
+    3 first we need to install the viralenv and then we run the command virtualenv venv so far we create folder venv 
+    to play it we need to run source./venv/bin/activate 
+    4 no beause by defualt i was need to import again some things because the venv dont get tham
