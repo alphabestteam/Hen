@@ -37,15 +37,12 @@ def main():
     for friend in friends_list:
         friends_collection.insert_one(friend)
 
-    for collections in aviv_db.list_collection_names():
-        for document in aviv_db[collections].find():
-            print(document)
 
     army_collection.delete_one({"name:":"Lihi"})
 
     dev_ops_friend = army_collection.find_one({'work:': 'DevOps','age:': {'$lt':23}})
     print()
-    print(dev_ops_friend)
+
 
     new_role = army_collection.find_one({"age:": dev_ops_friend["age:"], "_id": {"$ne": dev_ops_friend["_id"]}})
     army_collection.update_one({"_id" : dev_ops_friend["_id"]}, {"$set" : {"work:" : new_role["work:"]}})
@@ -59,6 +56,10 @@ def main():
     moving_soldiers = army_collection.find(delete_from_army)
     new_friend = friends_collection.insert_many(moving_soldiers)
     army_collection.delete_many(delete_from_army)
+
+    for collections in aviv_db.list_collection_names():
+        for document in aviv_db[collections].find():
+            print(document)
 
 
 
