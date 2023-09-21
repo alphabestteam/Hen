@@ -1,0 +1,21 @@
+1.  no-sql db is a db that not work with tables it is more dinamic but less orginaze 
+    we cant do complex things like tables connect to tables and selecting but when we create 
+    new collection (it is like tables just in no-sql) it is easy and we can change or update 
+    things very fast 
+2.  advantages 
+            1 very flex schema we dont need to define it before you restore data
+            2 it is very good when we have a lot data because we can restor it in many servers
+            3 in real time project we can analyze how it works very good 
+    disadvantages
+            1 because we dont need to define schema before we restore date the data not orgnaize 
+            very good and some times we can upload data that has non value 
+            2 we cant use select like we use in sql or other mothed that make me new collection
+            3 in most things we see sql beasuse it is very old so a lot systems works with sql and 
+            not with no-sql
+3.  database just as we think database
+    collection in database we can have a lot of collection   it is like tables in sql but more flex 
+    and we can have more keys
+    documents it is in the collection and it is sotred in "bson"
+4.  we need id to make every document uniqe and i we dont use it will be very diffiult to accesse to 
+    specifice documents  
+    
