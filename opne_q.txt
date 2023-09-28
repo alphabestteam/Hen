@@ -1,0 +1,51 @@
+1.  block level elements are blocks or box in html they take take new place on the page 
+    they contain other blocks example is div , p .
+    inline block as they sound they are elements inside elements but they can also contain 
+    elements inside them but they don't start a new place in the page just take place inside 
+    the elements they in him as much they need example  is  ul .
+    inline elements do not create new block  the just on other block level or inline elements 
+    example for this is a ,span , em 
+
+2.  is a declaration we put on at the top of html file it tell us with version of html we use 
+
+3.  the css box model give us the option to control how html elements present on the page by size 
+    width or any other design , padding is used to make space between the content and the limit of the 
+    border in the elements , margin is used to make space around the elements box from other elements
+
+4.  responsive web design is a way to make website that work on any size of screen that mean if the 
+    screen is big or small the font will change by that to make the user nice expirence.
+    principles of responsive web are many things like we prefer to use % because is will change the font 
+    by the size of the screen instade use px the will keep the size no matter what the size of the screen
+    and we use em rem for change text size and we also need to think in small screen what data is important 
+    and what not and if the user use small screen maybe we need to show him the important data 
+
+5.  px ,it is tell how many pixel elements gets and in not change 
+    % , when we use that the elements gets present of size of father elements
+    em , use to get the font size fo the nearest parent element 
+    rem , it is like em but it refernce to the root elements 
+
+6.  position and display control how elements looks like in the page.
+    position we can put static this is the dufalut value ,relative they get position relative to the normal position 
+    in the document you can use the top bottom left and right to change him without effect other elements, 
+    absolute they have absolute position the refernce to their parent , sticky based on the user scroll we can scroll 
+    until we get to their limit they stick containing elements 
+
+8.  class used to group many elements and give them the same style element can have many class we want 
+    id use to control style of one element every element has just one id 
+
+9.  first of all span in inline element and div is block element 
+    span use to give inline element style and div give to all the inline elements inside him the same style
+
+10. semantic html elements are elements that have porpce in their data we use them to imporove our code 
+    for example header is element represents a group of elements that we usully put in the top of every page 
+    nav element that present the section page 
+
+11. they give us option to put content before and after element like before every h1 element we put #henyair 
+
+12. scss it is like css but with super powers it has more functions and it can dot more things
+    in scss you can difaine values and use them like color or size
+    in scss when you want to write style to nested elements you can write is in the same separate 
+    in scss you have more function and you can create on your on if you want 
+    
+
+
