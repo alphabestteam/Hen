@@ -1,0 +1,30 @@
+1.  json is javascript object notation
+2.  is a way to store data or get data in a text format
+3.  class  map tuple dictionary 
+4.  array list tuple arralylist colection 
+5.  string numbers booleans null array and also objects
+6.  same value like in json
+7.  null booleans numbers 
+8.  we can use "" without to put charcters in 
+9.  keys are the names associated with values in json objects
+10. booleans are support as values
+11. yes
+12. yes
+13. yes
+14. json  it is not has specific file format it has a lot ways to store or exchange data
+15. javascript object notation
+16. .json 
+17. with , 
+18. []
+19. {}
+20. yes
+21. parse convert from json to javascript objects and and loads covert json to python
+    we can use also xml that have different fromats 
+22. it is more complex more expensive less readable 
+23. syntax , json has data types xml dont
+24. when i use api or when i want to use configuration files or storing not sql
+26. we use dict = json.loads() and than we use first_codename = dict["codename"][0]
+
+
+bonus: after the joker beat the hell out of him and batman did not reveange him by kill the joker 
+jason became anti hero by his rules and became "Red Hood"

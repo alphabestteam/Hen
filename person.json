@@ -1,0 +1,66 @@
+{
+    "people": [
+      {
+        "name": "Jane Smith",
+        "age": 35,
+        "cars": [
+          {
+            "price": 30000,
+            "yearOfRelease": 2021,
+            "horsePower": 200,
+            "maxSpeed": 160,
+            "numberOfCylinders": 6
+          },
+          {
+            "price": 40000,
+            "yearOfRelease": 2023,
+            "horsePower": 250,
+            "maxSpeed": 180,
+            "numberOfCylinders": 8
+          }
+        ]
+      },
+      {
+        "name": "Michael Johnson",
+        "age": 40,
+        "cars": [
+          {
+            "price": 22000,
+            "yearOfRelease": 2019,
+            "horsePower": 180,
+            "maxSpeed": 150,
+            "numberOfCylinders": 4
+          }
+        ]
+      }
+    ],
+    "cities": [
+      {
+        "name": "Chicago",
+        "timeZone": "Central Time",
+        "zipCode": "60601",
+        "population": 2716000,
+        "yearEstablished": 1837,
+        "mayor": {
+          "name": "Lori Lightfoot",
+          "age": 59,
+          "yearElected": 2019,
+          "yearlySalary": 220000
+        }
+      },
+      {
+        "name": "San Francisco",
+        "timeZone": "Pacific Time",
+        "zipCode": "94101",
+        "population": 883305,
+        "yearEstablished": 1776,
+        "mayor": {
+          "name": "London Breed",
+          "age": 47,
+          "yearElected": 2018,
+          "yearlySalary": 210000
+        }
+      }
+    ]
+  }
+  
