@@ -1,0 +1,31 @@
+1. the main porpus of ietf is to develop protocols to the entrnet and check if they work 
+2. this are the rules and the ways 2 protocols comunicte between each other like transport 
+data links security  iot protocols
+3. it is stands Reqest for comments where people can shere comments about protocols and give new ideas
+4. it used for communication between clints and servers like web browsing data retrieval api communication 
+hypermedia transfer stateless secure data transfet RESTful services
+5. they are very simmler but they are different in security http send that data like simple text so we can listen 
+to the data he works with tcp and https works with also with tls and he add another lair that use ssl tls to make 
+the data more secure 
+6. it works like quastion and answer some cline ask something send to the server and gets answer the server calculte 
+the quastoin and response the right action 
+7. it is like agent that identifies clinte or request it contains name of clinte version it helps to the web server 
+understand what the clinte want and give him data the fit to him , web server it is hardware the responds to http request 
+by img vidoes html so if clinte ask for somthing he usualy gets it like page web , proxies are servers between the servers and 
+the clints 
+8. it gives us anonymy secuery and caching we can hide with them ip address and also control incoming to make that not 
+all the request will be on one server so they sprite them equaly  we can also use proxies for cyber attack 
+9. it refers to the state that the protocol save to keep his prograss when the country he is in help like stateful protocols 
+they are save data from both sides and they are secure , non stateful protocols it is without secure they work alone 
+10. no http not use state it means he dont save request from the past
+11.  clinet make http request like kick on link url than tcp protocole make the connection to the server than the server processing the 
+data he need to send back and than http response send back all the data the server processing than client processing  all the data and than
+the client close the tcp connection 
+12. headers request are information about the client that tell how the sever soulde response 
+13. when we use website the first time we need to get from the server all the data of the page we use cookie to save all that data 
+on our computer and just when the page change in the server and we use the web we send all the data again
+14. methods like get post put  , url , verstion of http , headrs , query parametrs , and their are some optional things like 
+cookes of custom headrs
+15. first status like versoin the status code (200) and text (OK) , response headres , body like html and json 
+16. 2 use tcp 3 use udp , 2 allow to get and send a lot of data together while 3 is unic , 3 make connection fast than 2 
+3 is more secure 
