@@ -1,0 +1,9 @@
+interface,vlan
+Eth0,20
+Eth1,30
+Eth2,20
+Eth3,20
+Eth4,30
+Eth5,30
+Eth6,30
+Eth7,
