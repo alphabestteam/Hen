@@ -1,0 +1,37 @@
+1. it used to present stuctre of database and how it stored and to orgnize this
+2. Django works with mvc so views.py control the view part it responsible for handling HTTP request
+   and give back response 
+3. it used to control the URL routs an th maps where they goes like if we get url where he goes to which function 
+4. they are help to manage the update of our database schema over time we need them if we want to change our sructure of
+   our schema and we make them "python manage.py makemigrations" and to update python manage.py migrate
+5. it used for take data types like Django or QuerySets and convert them to python data that easy to convert to json 
+6. this tool for build web api in Django 
+7. regular are give you full control of how to stuctre luck like but model use the defualt settigns , we use regular 
+   when we prefer full contorl over our data and model when we prefer quick way to create things
+8. one to one when we want to create a unique relationship , like user profile to user account
+   one to many when we want to create one model has many related models , like in a blog one user has many posts
+   many to one when many relationship connect to one modle ,like many comments on post connect to one posts
+   many to many when may relationship connect to many models , like songs and artists like song can be sing by many artists
+   and many artists have many songs
+9. django-admin startproject <name-of-project>
+   py manage.py startapp <app-name>
+   and than we need to create moodles and set how i want the schema  will look like 
+   after this we create migrations by those commands "python manage.py makemigrations <app-name> and python manage.py migrate
+   we create view model 
+   add url 
+   and run the server with this commands 'python manage.py runserver'
+10.clinte make request
+   than the ruls.py direct the the url with post request
+   views mpas the url the the right function 
+   parsing the data by the function 
+   after hand the request the func return json or html 
+11.those are python class that get the request before and handle it and can caulculte things or checking for bugs vairus 
+   we can use it for checking if user login is verfing if he has accesss and if he has where what he can or cant django
+12.they are like defualt data that you can put in your database for make tests 
+   for export data from the database use "python manage.py dumpdata myapp.<my-modle> --output=<my-data>.json"
+   for load data from fixture use "pyton manage.py loaddata mydata.json"
+   for reset the database you python manage.py flush , and python manage.py loaddata mydata.json
+13.annotate that func gives us way to add fields or annotations to objects in the QuerySet we can use it for sum values or caulculte avg
+   or group data by fields
+14.managers are used for way to connect to the tables and make them simple to understed the data in them , every model comes with manager 
+named object that give you option to create update delete and more 
