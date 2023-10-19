@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Person(models.Model):
@@ -9,5 +10,5 @@ class Person(models.Model):
 
 class Parent(Person):
     work_place = models.CharField(max_length=30)
-    salary = models.DecimalField(max_digits=8,decimal_places=2)
+    salary = models.IntegerField()
     kids = models.ManyToManyField(Person,related_name="parents", default=[])

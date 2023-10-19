@@ -18,7 +18,7 @@
 8.Parent.objects.annotate(num_children=Count('kids')).aggregate(children_count=Sum('num_children'))
   and import Sum
 
-9.Parent.objects.order_by('salary').last()
+9.Parent.objects.order_by('salary').values('name','salary').last()
 
 10.Person.objects.filter(parents__salary__gte=50000)
 
