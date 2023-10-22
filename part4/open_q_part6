@@ -1,0 +1,24 @@
+1. Parent.objects.all().values()
+
+2. Parent.objects.filter(work_place='Goolge')
+
+3.Parent.objects.annotate(max_child_birth_date=Max('kids__birth_data')).order_by('max_child_birth_date')
+  this is the line but i allso import Max , "from django.db.models import Max"
+
+4.Person.objects.filter(name__icontains='i').values()
+
+5.Person.objects.filter(Q(city='Raanana') | Q(city='Tel Aviv')).values()
+
+6.Parent.objects.aggregate(average_salary=Avg('salary'))
+  and import Avg
+
+7.Parent.objects.annotate(num_children=Count('kids')).values('name', 'num_children')
+  and import Count
+
+8.Parent.objects.annotate(num_children=Count('kids')).aggregate(children_count=Sum('num_children'))
+  and import Sum
+
+9.Parent.objects.order_by('salary').values('name','salary').last()
+
+10.Person.objects.filter(parents__salary__gte=50000)
+
