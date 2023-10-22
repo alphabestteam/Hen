@@ -78,15 +78,14 @@ def add_parent(request):
     if request.method == 'POST':
         try:
             object_data = JSONParser().parse(request)
-            print("good")
             data_deserialized = ParentSerializer(data=object_data)
             if data_deserialized.is_valid():
                 data_deserialized.save()
-                return HttpResponse("the parent was saved succesfuly!",status=200)
+                return JsonResponse("the parent was saved succesfuly!",safe=False,status=200)
             else:
-                return HttpResponse("the object is not well-formed",status=400)
+                return JsonResponse("the object is not well-formed",safe=False,status=400)
         except:
-            return HttpResponse("the object is not well-formed",status=400)
+            return JsonResponse("the object is not well-formed",safe=False,status=400)
         
 @csrf_exempt
 def all_parents(request):
@@ -137,7 +136,7 @@ def get_parent_and_kid(request,parent_id):
             }
             return JsonResponse(result,safe=False,status= 200)
         except :
-            return HttpResponse("Parent not found.", status=400)
+            return JsonResponse("Parent not found.",safe=False, status=400)
 
 @csrf_exempt
 def rich_kid(request):
@@ -151,7 +150,7 @@ def rich_kid(request):
             rich_children_data = [PersonSerializer(rich_child).data for rich_child in rich_children]
             return JsonResponse(rich_children_data, safe=False, status=200)
         except :
-            return JsonResponse("cant find richkid",safe=False,status=500)
+            return JsonResponse("cant find richkid",safe=False,status=400)
 
 
 @csrf_exempt
@@ -167,7 +166,7 @@ def find_parents(request,kid_id):
                     parents_of_kid.append(parent_serialized)
             return JsonResponse(parents_of_kid,safe=False,status=200)
         except :
-            return HttpResponse("Parent not found.", status=400)
+            return JsonResponse("Parent not found.",safe=False, status=400)
 
 
 
@@ -186,7 +185,7 @@ def find_kids(request,parent_id):
             }
             return JsonResponse(result,safe=False,status= 200)
         except :
-            return HttpResponse("Parent not found.", status=400)
+            return JsonResponse("Parent not found.",safe=False, status=400)
 
 @csrf_exempt
 def find_grand(request,grand_kid_id):
@@ -199,11 +198,11 @@ def find_grand(request,grand_kid_id):
                 if grand_kid.id in parent.kids.all().values_list('id', flat=True):
                     for grand_parent in parents:
                         if parent.id in grand_parent.kids.all().values_list('id',flat=True):
-                            grand_parents_serialized = ParentSerializer(parent).data
+                            grand_parents_serialized = ParentSerializer(grand_parent).data
                             grand_parents_of_kid.append(grand_parents_serialized)
             return JsonResponse(grand_parents_of_kid,safe=False,status=200)
         except :
-            return HttpResponse("Parent not found.", status=400)
+            return JsonResponse("Parent not found.",safe=False, status=400)
 
 @csrf_exempt
 def find_brothers(request,brother_id):
