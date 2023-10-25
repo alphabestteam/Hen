@@ -1,0 +1,21 @@
+3. they are parameters for transfor data using http get and we can use them to filtereing or searching specific data
+4. httpresponse for http response and Response used for api respones 
+   httpresponse contain html and Response contain json 
+5. fbv are more simple and easy to understand them bedause you control the logic so when you need simple and basic logic
+   use fbv when you use common patterns you can get them with the class so we use calss when i use stanrts function like 
+   crud or when i want my code more orginze 
+6. when i write the function obove her @api_view(['GET,'POST']) and in the function add logic that handle when it get or POST
+7. it depends what data it get if there is instanse in the serializer it update and if not create
+8. if you use function use serializer.errors and if you use class so CreateAPIView handle it 
+9. it return exception of errors instade return bool and yes it more clean way to code
+12.by default the serializer indlude just the pk of related objects but we can use depth include more fields between objects
+14.it make this fields not changeable 
+15.it make new fields that wasnt exist
+16 it used for conection between models by fields and you can get this data for that model by this slug field if we use read only
+   it means that we cant change him 
+17.when i do query that conatain oneToOne or ForeignKey select_ralted make it faster and easy to do (user = User.objects.select_related('user').get(id=user_name))
+   here i make query that take all the UserK that in user that connect with user user_name
+   and prefetch_related take the data with querys and can be very affective when you work on many objects that connected 
+   users = User.objects.all().prefetch_related('user')
+19.it take tow objects that connected and take the data vailted it and make complex querys with it 
+   and this is the lyberay "django-rest-framework-bulk"
