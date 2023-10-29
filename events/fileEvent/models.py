@@ -28,13 +28,11 @@ class regularEvent(models.Model):
             self.toyota = False
         else:
             self.toyota = True
-        
-
         super().save(*args, **kwargs)
 
 class EventWithFiles(regularEvent):
     upload_date = models.DateField()
-    #file = models.FileField(upload_to='file_uploads/')
+    file = models.FileField(upload_to='file_uploads/')
     user_upload = models.ForeignKey(User, on_delete=models.CASCADE, related_name='uploaded_files', null=True, blank=True)
 
 class chat(models.Model):

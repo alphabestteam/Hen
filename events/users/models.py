@@ -12,5 +12,4 @@ class User(models.Model):
     famely_name: models.CharField(max_length=20)
     user_name = models.CharField(max_length=20, unique=True)
     email = models.EmailField(validators=[validate_email])
-    unread_messages = models.ManyToManyField('self')
     

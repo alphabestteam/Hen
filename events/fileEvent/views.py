@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework.decorators import api_view
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
-from .models import regularEvent,EventWithFiles,eventWithChat,message,chat
+from .models import regularEvent,EventWithFiles,eventWithChat,message,chat,User
 from .serializers import RegularEventSerializer,EventWithFilesSerializer,EventWithChatSerializer,MessageSerializer,ChatSerializer
 
 @api_view(['DELETE'])
@@ -129,14 +129,6 @@ def create_message(request):
     serializer = MessageSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
         serializer.save()
-        # chat = serializer.validated_data['chat']  
-        # event_with_chat = chat.chat_event  
-
-        # users = event_with_chat.users_names.all()
-        # sender = serializer.validated_data['user_send']
-        # for user in users:
-        #     if user != sender: 
-        #         user.unread_messages.add(serializer.instance)
         return Response(serializer.data)
 
 @api_view(['PUT'])
@@ -182,4 +174,14 @@ def update_chat(request, chat_id):
 def delete_chat(request, chat_id):
     chat_instance = get_object_or_404(chat, id=chat_id)
     chat_instance.delete()
+    return Response()
+
+@api_view(['GET'])
+def get_unread_message(request, user_id, chat_id):
+    user = get_object_or_404(User, id=user_id)
+    chat = get_object_or_404(eventWithChat, id=chat_id)
+    if user in chat.users_names.all():
+        messages = message.objects.filter(chat=chat.chat)
+        message_texts = [msg.text for msg in messages]
+        return Response({'messages': message_texts})
     return Response()
