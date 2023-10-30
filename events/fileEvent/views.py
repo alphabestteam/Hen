@@ -58,19 +58,25 @@ def create_event_file(request):
         return Response(serializer.data)
 
 @api_view(['PUT'])
-def update_event(request, event_id):
+def update_event(request, event_id,user_id):
     event = get_object_or_404(regularEvent, id=event_id)
-    serializer = RegularEventSerializer(event, data=request.data)
-    if serializer.is_valid(raise_exception=True):
-        serializer.save()
-        return Response(serializer.data)
+    user = get_object_or_404(User, id=user_id)
+    if user in event.users_names.all():
+        serializer = RegularEventSerializer(event, data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response(serializer.data)
+    return Response("cant do it")
 @api_view(['PUT'])
-def update_event_file(request, event_file_id):
+def update_event_file(request, event_file_id,user_id):
+    user = get_object_or_404(User, id=user_id)
     event = get_object_or_404(EventWithFiles, id=event_file_id)
-    serializer = EventWithFilesSerializer(event, data=request.data)
-    if serializer.is_valid(raise_exception=True):
-        serializer.save()
-        return Response(serializer.data)
+    if user in event.users_names.all():
+        serializer = EventWithFilesSerializer(event, data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response(serializer.data)
+    Response("cant do it")
     
 
 @api_view(['DELETE'])
@@ -105,12 +111,15 @@ def create_event_chat(request):
         return Response(serializer.data)
 
 @api_view(['PUT'])
-def update_event_chat(request, chat_id):
+def update_event_chat(request, chat_id,user_id):
+    user = get_object_or_404(User,id = user_id)
     chat = get_object_or_404(eventWithChat, id=chat_id)
-    serializer = EventWithChatSerializer(chat, data=request.data)
-    if serializer.is_valid(raise_exception=True):
-        serializer.save()
-        return Response(serializer.data)
+    if user in chat.users_names.all():
+        serializer = EventWithChatSerializer(chat, data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response(serializer.data)
+    return Response("cant do it")
 
 @api_view(['GET'])
 def get_all_messages(request):
