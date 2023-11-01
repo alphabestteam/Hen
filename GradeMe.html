@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p >Enter Your grade: <input type="text" id="gradeInput"></p>
+    <button onclick="getGrade()">Submit</button>
+    <script>
+        function getGrade(){
+            let char = "";
+            let sentence ="";
+            const gradeInput = document.getElementById("gradeInput");
+            const grade = gradeInput.value;
+            if (grade == 100){
+                char = "A+";
+            }else if(grade>=90 && grade <=99){
+                char = "A";
+            }else if(grade<=89 && grade >=80){
+                char = "B";
+            }else if(grade<=79 && grade >=70){
+                char = "C";
+            }else if(grade<=69 && grade >=60){
+                char = "D";
+            }else if(grade<=59 && grade >=50){
+                char = "E";
+            }else if(grade< 50 && grade >=0){
+                char = "F";
+            }else{
+                char = "Z"
+            }
+
+            switch(char){
+                case "A+":
+                    sentence = "Perfect!";
+                    break;
+                case "A":
+                    sentence = "Amazing!";
+                    break;
+                case "B":
+                    sentence = "Nicely done!";
+                    break;
+                case "C":
+                    sentence = "This is fine!";
+                    break;
+                case "D":
+                    sentence = "You can do better!";
+                    break;
+                case "E":
+                    sentence = "Moed B is an option!";
+                    break;
+                case "F":
+                    sentence = "Moed B is a must!";
+                    break;
+                default:
+                    sentence = "Not good input"
+            }
+
+            const resultDiv = document.createElement("div");
+            resultDiv.innerHTML = `Grade: ${grade}, Char: ${char}, Sentence: ${sentence}`;
+            document.body.appendChild(resultDiv);
+        }
+    </script>
+</body>
+</html>
