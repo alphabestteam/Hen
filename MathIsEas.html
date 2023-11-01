@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        evalNumbers(5,5,"multiply")
+        function evalNumbers(firstNumber,secondNumber,operator){
+            let result =0;
+            let sentence ="";
+            switch(operator){
+                case "add":
+                    result = firstNumber+secondNumber;
+                    sentence = `Sum of ${firstNumber} and ${secondNumber} is ${result}`;
+                    break;
+                case "subtract":
+                    result = firstNumber-secondNumber;
+                    sentence = `Difference of ${firstNumber} and ${secondNumber} is ${result}`;
+                    break;
+                case "multiply":
+                    result = firstNumber*secondNumber;
+                    sentence = `Product of  ${firstNumber} and ${secondNumber} is ${result}`;
+                    break;
+                case "add":
+                    result = firstNumber/secondNumber;
+                    sentence = `Division of ${firstNumber} and ${secondNumber} is ${result}`;
+                    break;
+                case "add":
+                    result = firstNumber%secondNumber;
+                    sentence = `Modulus ${firstNumber} and ${secondNumber} is ${result}`;
+                    break;
+                default:
+                    sentence = "not good input"
+            }
+            const resultDiv = document.createElement("div");
+            resultDiv.innerHTML = sentence
+            document.body.appendChild(resultDiv);
+        }
+    </script>
+</body>
+</html>
