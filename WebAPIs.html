@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="start()">
+    <button onclick="decision()">search for Patric?</button>
+
+    <script>
+        function start() {
+          alert("Hello! Bob, Patric get lost");
+        }
+        function decision(){
+          let chose = "Press a button!\n Ok if you go to find him \n cencel if you dont ";
+          if (confirm(chose) == true) {
+            chose = "you are good friend it going to be fun trip";
+            alert(chose);
+          } else {
+            chose = "you are a bad friend";
+            alert(chose);
+            window.location.reload();
+          }
+          did_find = prompt("did you find patric");
+          if(did_find == "yes"){
+            alert("good job")
+          }else{
+            window.location.reload();
+          }
+        }
+
+        </script>
+</body>
+</html>
