@@ -56,3 +56,22 @@ arrayText.forEach(word => {
     span.className = "random-word";
     random_words.appendChild(span);
 });
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", () => {
+    const spans = random_words.querySelectorAll("span");
+    spans.forEach(span => {
+        const style = "background-color: " + randomRRGGBB();
+        span.setAttribute("style", style);
+    });
+});
+
+function randomRRGGBB() {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+};
