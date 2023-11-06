@@ -31,7 +31,7 @@ const startButton = document.getElementById("start-btn");
 inputElement.disabled = true; 
 let seconds = 0;
 let intervalId;
-
+let objectsData = [];
 
 
 function getRandomQuote() {
@@ -43,6 +43,11 @@ function getRandomQuote() {
 function startGame() {
     const sentence = getRandomQuote();
     typeSentence = document.getElementById("quote");
+
+    while (typeSentence.firstChild) {
+        typeSentence.removeChild(typeSentence.firstChild);
+    }
+
     const sentence_length = sentence.length;
 
     for (let i = 0; i < sentence_length; i++) {
@@ -123,6 +128,62 @@ function endGame() {
     result.appendChild(wordSpan);
     result.appendChild(speedSpan);
     result.appendChild(presentSpan);
+
+    storeDataInLocalStorage(timeSpan,wordSpan,speedSpan,presentSpan,present,speed);
+}
+
+function storeDataInLocalStorage(timeSpan,wordSpan,speedSpan,presentSpan,present,speed) {
+    const timeSpanValue = timeSpan.textContent;
+    const wordSpanValue = wordSpan.textContent;
+    const speedSpanValue = speedSpan.textContent;
+    const presentSpanValue = presentSpan.textContent;
+
+
+    const score = (speed * present).toFixed(2);
+    
+    const data = {
+        "time": timeSpanValue,
+        "words": wordSpanValue,
+        "speed": speedSpanValue,
+        "accuracy": presentSpanValue,
+        "score":score,
+    };
+    objectsData = JSON.parse(localStorage.getItem("gameData")) || [];
+    console.log(objectsData);
+    objectsData.push(data);
+    console.log(objectsData);
+    localStorage.setItem('gameData', JSON.stringify(objectsData));
+    displayDataFromLocalStorage();
+}
+
+function displayDataFromLocalStorage() {
+    const storedData = JSON.parse(localStorage.getItem('gameData'));
+    const table = document.getElementById('scoreboard');
+
+    while (table.rows.length > 0) {
+        table.deleteRow(0);
+    }
+
+    if (storedData) {
+        storedData.sort((a, b) => b.score - a.score);
+        for (let i = 0; i < storedData.length; i++) {
+            const data = storedData[i];
+            const newRow = table.insertRow(-1);
+            const rankCell = newRow.insertCell(0);
+            const wordsCell = newRow.insertCell(1);
+            const timeCell = newRow.insertCell(2);
+            const wpmCell = newRow.insertCell(3);
+            const accuracyCell = newRow.insertCell(4);
+            const scoreCell = newRow.insertCell(5);
+
+            rankCell.innerHTML = i + 1;
+            wordsCell.innerHTML = data.words;
+            timeCell.innerHTML = data.time;
+            wpmCell.innerHTML = data.speed;
+            accuracyCell.innerHTML = data.accuracy;
+            scoreCell.innerHTML = data.score;
+        }
+    }
 }
 
 
@@ -137,8 +198,8 @@ function startButtonClickHandler() {
         seconds = Math.floor(elapsedTime / 1000);
         timerElement.textContent = seconds;
     }, 1000);
+    startGame();
 }
 
 startButton.addEventListener("click", startButtonClickHandler);
-startGame();
 document.getElementById("input").addEventListener("input",checkInput);
