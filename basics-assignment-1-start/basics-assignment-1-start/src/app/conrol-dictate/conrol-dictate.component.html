@@ -14,14 +14,17 @@
 </mat-card>
 
 <label for="repeatCount">Repeat Count:</label>
-<mat-select id="repeatCount" [(ngModel)]="repeatCount">
-    <mat-option *ngFor="let count of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" [value]="count">{{ count }}</mat-option>
+<mat-select [(ngModel)]="repeatCount">
+    <mat-option *ngFor="let count of repeatOptions" [value]="count">{{ count }}</mat-option>
 </mat-select>
 
 <mat-card >
-    <mat-card-content>
+    <mat-card-content *ngIf="selectedAlert" >
         <app-success-alert *ngFor="let index of getRepeatArray()"></app-success-alert>
     </mat-card-content>
+    <mat-card-content *ngIf="!selectedAlert" >
+      <app-warning-alert *ngFor="let index of getRepeatArray()"></app-warning-alert>
+  </mat-card-content>
 </mat-card>
 
 

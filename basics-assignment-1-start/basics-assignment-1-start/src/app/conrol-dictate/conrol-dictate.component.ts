@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class ConrolDictateComponent {
   selectedAlert: boolean = true;
   repeatCount: number = 1;
+  readonly repeatOptions: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   changeAlerts() : void {
     this.selectedAlert = !this.selectedAlert;
