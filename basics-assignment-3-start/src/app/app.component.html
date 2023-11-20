@@ -1,0 +1,9 @@
+
+<button (click)="toggleDetails()" class="btn btn-primary">Display Details</button>
+<p *ngIf="displayDetails">{{ secretMessage }}</p>
+
+<div *ngFor="let click of buttonClicks; let i = index"
+     [ngStyle]="i >= 4 ? {'background-color': 'blue'} : {}"
+     [ngClass]="i >= 4 ? 'blue-background' : ''">
+  {{ click }}
+</div>
