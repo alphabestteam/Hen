@@ -1,0 +1,5 @@
+docker load -i mysql.tar
+
+docker run -d --name mysql-container -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=Hen -e MYSQL_USER="%" -e MYSQL_PASSWORD="" mysql
+
+docker rm --force mysql-container

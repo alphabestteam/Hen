@@ -1,0 +1,16 @@
+1. docker is a platform that made for create aplicationos with containers 
+   that allows you to take all the part of the application includes libraries 
+   and send it what make it work on every computer and not just on your 
+2. image it is instructions for how to make the containers and it is read only 
+   docker pull registry/image,from the cloud
+   docker load -i image.tar,from file
+   docker build -t name:tag<path> based on prameters
+3. container run on machine and he can share the same system and kernel whit other 
+   containers , after we pull image we run docker he makes container 
+4. image it is instructionis for how to make containres and container is run instance of image 
+5. it is key-value that we can send to run container to difine how the container will work
+   we can diffine them when he run or at the time we build him
+6. volumes are connection between folder in the local machine to folder in the container 
+   which means that if we make change on each one of them after restart it will be update 
+   in the other one 
+   

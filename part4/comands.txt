@@ -1,0 +1,7 @@
+docker run -d --name mysql-container -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=Hen -e MYSQL_USER="%" -e MYSQL_PASSWORD="" -v C:\Users\Hen\Desktop\docker_volume:/var/lib/mysql mysql
+
+the data store in docker_volume that contain mysql data files like databases tables 
+also database files 
+and mysql logs and configuration 
+
+after delete and run again the folder update with files of redo and temp 
