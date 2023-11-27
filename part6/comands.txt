@@ -1,0 +1,6 @@
+1. it is faster because it start minimizing size ,dont upgrade if dont need 
+very orginze 
+2. the first one is better because if you  make many layers so it make big size 
+so we prefer to do it all in one 
+
+3.docker history mysql_image:tag
