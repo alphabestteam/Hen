@@ -1,0 +1,26 @@
+version: "3.8" = we say that the compose file written in version 3.8
+
+services = stand for all the services i will use 
+
+mongo: = first services 
+
+image : mongo: latest = stand for the latest version of mongodb docker image
+
+container_name : mongo = we difine the name of the container 
+
+environment : = we declare enviroment varialbes for the container her we use the root username and the root password
+
+ports: tell the prot for the host and the container port 
+
+volumes : define two volumes for data storage in the directory of the container 
+
+in the mongo-express most of the lines is the same like in mongo
+
+volumes: = we difine 2 docker volumes 
+
+
+
+for run i use docker-compose up
+for delete i use docker-compose down
+
+i create .env file to put all the environment 
