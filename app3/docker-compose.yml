@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+
+  backend:
+    build: .
+    container_name: dockercompose2
+    environment:
+      - SUPPRESS_NO_CONFIG_WARNING=true
+    ports:
+      - "3000:3000"
+
+  database:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
+    name: mongo-data
