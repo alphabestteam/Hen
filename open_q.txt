@@ -1,0 +1,15 @@
+part 1
+1. system that control the basic things on your computer all what the user see work with the os
+2. kernel is inner peace in the the system that make connection between hardwere and software
+3. that linux is open to every body to change what ever they want in the os 
+4. a: free , b: open-source , c: very secure system , d: linux server can run non-stop 
+5. it is like version of linux that people makes 
+6. arch centOs devian redora gentoo linuxMint openSuse redhat slackware ununto
+
+part 2 
+1. on woindows files are in folders and on different dives and in linux is is on tree stucture
+2. every things on linux is file we have genral files directory files device files
+3. it is like super user that can change things on the os
+4. on windows not and on linux yes
+5. on linux home/hen/ and on windows it is simmilar but we can change it 
+6. in linux /tmp and on windows C:\Users\hen\AppData\Local\Temp
