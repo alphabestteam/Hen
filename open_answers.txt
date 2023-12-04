@@ -22,3 +22,12 @@ kubectl expose deployment frontend-deployment --type=LoadBalancer --port=80 --ta
 
 kubectl create deployment backend-deployment --image=ghcr.io/expruc/kubernetes-gradutaion-drill/k8s-final-drill:backend
 kubectl expose deployment backend-deployment --type=LoadBalancer --port=5000 --target-port=5000 --name=backend-service
+
+----------part 2--------------------------------------------------------------------------------------------------------
+
+i create 2 file front service and back service and run those commands
+
+kubectl apply -f front_service.yaml
+kubectl apply -f back_service.yaml
+
+ant to see that works i use kubectl get services 
