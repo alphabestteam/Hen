@@ -18,9 +18,9 @@ spec:
         image: ghcr.io/expruc/kubernetes-gradutaion-drill/k8s-final-drill:frontend
         ports:
         - containerPort: 80
-        env:
-        - name: PORT
-          value: "80"
-        - name: BACKENDURL
-          value: "http://backend-service:5000"
+        envFrom:
+          - configMapRef:
+              name: front-configmap
+          - secretRef:
+              name: front-secret
 
