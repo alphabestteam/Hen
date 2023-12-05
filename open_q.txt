@@ -1,3 +1,12 @@
-i prefer to use congingMaps because it very orginze when i have a lot of variblus
-and also if i want some of them would be secure the best way to do that it with 
-congingMaps
+kubectl scale deployment -n my-namespace backend-deployment --replicas=3
+
+
+i use this command to increase the pods and this command 
+
+kubectl get pods -n my-namespace
+
+to see them
+
+
+i shoulde use this when to handle big traffic or where there is workload i also can 
+make less of them when the traffic is low
