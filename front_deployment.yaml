@@ -30,4 +30,9 @@ spec:
               name: front-configmap
           - secretRef:
               name: front-secret
+        readinessProbe:
+          httpGet:
+            port: 80
+          initialDelaySeconds: 5 
+          periodSeconds: 10 
 

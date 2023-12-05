@@ -21,3 +21,8 @@ spec:
         envFrom:
           - configMapRef:
               name: back-configmap
+        readinessProbe:
+          httpGet:
+            port: 5000
+          initialDelaySeconds: 5
+          periodSeconds: 10   
