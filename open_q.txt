@@ -8,5 +8,8 @@ kubectl get pods -n my-namespace
 to see them
 
 
-i shoulde use this when to handle big traffic or where there is workload i also can 
+i should use this when to handle big traffic or where there is workload i also can 
 make less of them when the traffic is low
+
+i choose those limitation because i dont have a lot of traffic but if will be a lot of traffic
+i will add more it is all depends in the traffic and what i need in the moment 
