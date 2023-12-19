@@ -7,6 +7,6 @@ class borrowBookSerializers(serializers.ModelSerializer):
         fields = '__all__'
 
 class sellBookSerializers(serializers.ModelSerializer):
-    class Meta:
+    class Meta(borrowBookSerializers.Meta):
         model = sellBook
-        fields = '__all__'
+        fields = ('price') + borrowBookSerializers.Meta.fields

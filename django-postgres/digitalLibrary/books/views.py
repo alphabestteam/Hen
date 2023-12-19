@@ -37,3 +37,14 @@ def deleteBook(request,user_id,book_name):
     book.delete()
     return Response({"message": "Book deleted successfully"})
 
+@api_view(['GET'])
+def getBook(request,book_id):
+    try:
+        book = get_object_or_404(sellBook,id = book_id)
+        serializer = sellBookSerializers(book)
+    except:
+        book = get_object_or_404(borrowBook,id = book_id)
+        serializer = borrowBookSerializers(book)
+
+    return Response(serializer.data)
+

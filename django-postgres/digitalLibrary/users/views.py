@@ -12,10 +12,21 @@ def users(request):
         serializer = UserSerializer(users,many=True)
         return Response(serializer.data)
     elif request.method == 'POST':
-        if User.objects.filter(**request.data).exists():
-            return Response("this user already exist")
+        print(request.data)
         serializer = UserSerializer(data=request.data)
-        if serializer.is_valid(raise_exception=True):
+        if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data)
+            return Response({'user_created': True, 'data': serializer.data}, status=200)
+        return Response(serializer.errors, status=400)
+    
+@api_view(['GET','PUT','DELETE'])
+def get_user(request,email,password):
+    if request.method == 'GET':
+        users = get_object_or_404(User,email=email,password=password)
+        serializer = UserSerializer(users)
+        return Response({'user_exist':True,'user':serializer.data},status=200)
+    elif request.method == 'PUT':
+        pass
+    elif request.method == 'DELETE':
+        pass
 

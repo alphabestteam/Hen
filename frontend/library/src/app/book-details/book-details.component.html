@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+<div *ngIf="book">
+    <h2>{{ book.book_name }}</h2>
+    <p>Author: {{ book.owner_email }}</p>
+    <p>Author: {{ book.author_name }}</p>
+    <p>Author: {{ book.book_type }}</p>
+    <div *ngIf="hasPriceField(book)">
+        <p>Price: {{ book.price }}</p>
+    </div>
+</div>
+  
