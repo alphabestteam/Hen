@@ -14,6 +14,7 @@ import { BookCardComponent } from './book-card/book-card.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { PersonalAreaComponent } from './personal-area/personal-area.component';
 import { UploadBooksComponent } from './upload-books/upload-books.component';
+import { UpdateBookComponent } from './update-book/update-book.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { UploadBooksComponent } from './upload-books/upload-books.component';
     BookDetailsComponent,
     PersonalAreaComponent,
     UploadBooksComponent,
+    UpdateBookComponent,
   ],
   imports: [
     BrowserModule,

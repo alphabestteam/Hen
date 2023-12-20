@@ -30,4 +30,24 @@ export class PersonalAreaComponent implements OnInit{
       }
     );
   }
+
+  deleteBook(book_id:number):void{
+    const url = `http://localhost:8000/deleteBook/${sessionStorage.getItem('id')}/${book_id}/`
+    this.http.delete(url).subscribe(
+      (response: any) => {
+        if (response && response['book_deleted']) {
+          this.fetchBooks();
+        } else {
+          alert('Failed to delete book. Please try again.');
+        }
+      },
+      (error) => {
+        console.error('DELETE request failed:', error);
+        alert('Failed to delete book. Please try again.');
+      }
+    );
+  }
+  updateBook(bookId:number):void{
+    this.router.navigate(['/update-books/',bookId])
+  }
 }

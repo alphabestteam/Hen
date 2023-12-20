@@ -19,14 +19,12 @@ def users(request):
             return Response({'user_created': True, 'data': serializer.data}, status=200)
         return Response(serializer.errors, status=400)
     
-@api_view(['GET','PUT','DELETE'])
+@api_view(['GET','DELETE'])
 def get_user(request,email,password):
     if request.method == 'GET':
         users = get_object_or_404(User,email=email,password=password)
         serializer = UserSerializer(users)
         return Response({'user_exist':True,'user':serializer.data},status=200)
-    elif request.method == 'PUT':
-        pass
     elif request.method == 'DELETE':
         pass
 

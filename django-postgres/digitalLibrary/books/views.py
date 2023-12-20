@@ -27,32 +27,43 @@ def uploadBook(request):
             return Response({'book_created': True, 'data': serializer.data}, status=200)
         
 @api_view(['DELETE'])
-def deleteBook(request,user_id,book_name):
+def deleteBook(request,user_id,book_id):
     user = get_object_or_404(User, id=user_id)
     try:
-        book = get_object_or_404(sellBook, user=user, book_name=book_name)
+        book = get_object_or_404(sellBook, user=user, id=book_id)
     except:
-        book = get_object_or_404(borrowBook, user=user, book_name=book_name)
+        book = get_object_or_404(borrowBook, user=user, id=book_id)
 
     book.delete()
-    return Response({"message": "Book deleted successfully"})
+    return Response({'book_deleted': True,"message": "Book deleted successfully"})
 
-@api_view(['GET'])
+@api_view(['GET','PUT'])
 def getBook(request,book_id):
-    try:
-        book = get_object_or_404(sellBook,id = book_id)
-        serializer = sellBookSerializers(book)
-    except:
-        book = get_object_or_404(borrowBook,id = book_id)
-        serializer = borrowBookSerializers(book)
+    if request.method == 'GET':
+        try:
+            book = get_object_or_404(sellBook,id = book_id)
+            serializer = sellBookSerializers(book)
+        except:
+            book = get_object_or_404(borrowBook,id = book_id)
+            serializer = borrowBookSerializers(book)
 
-    return Response(serializer.data)
+        return Response(serializer.data)
+    elif request.method == 'PUT':
+        try:
+            book = get_object_or_404(sellBook,id = book_id)
+            serializer = sellBookSerializers(book, data=request.data)
+        except:
+            book = get_object_or_404(borrowBook,id = book_id)
+            serializer = borrowBookSerializers(book,data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response({'book_update':True,"message":"book update successfully"})
 
 @api_view(['GET'])
 def getUserBooks(request,user_id):
     user = get_object_or_404(User, id=user_id)
-    borrowBooks = borrowBook.objects.filter(user=user)
-    sellBooks = sellBook.objects.filter(user=user)
+    borrowBooks = borrowBook.objects.filter(user=user, book_type='Borrow')
+    sellBooks = sellBook.objects.filter(user=user, book_type='Sell')
 
     borrowBooksData = borrowBookSerializers(borrowBooks, many=True).data
     sellBooksData = sellBookSerializers(sellBooks, many=True).data
