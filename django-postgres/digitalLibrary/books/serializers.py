@@ -9,4 +9,4 @@ class borrowBookSerializers(serializers.ModelSerializer):
 class sellBookSerializers(serializers.ModelSerializer):
     class Meta(borrowBookSerializers.Meta):
         model = sellBook
-        fields = ('price') + borrowBookSerializers.Meta.fields
+        fields = '__all__'

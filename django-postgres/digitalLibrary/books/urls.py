@@ -4,5 +4,6 @@ from . import views
 urlpatterns = [
     path('uploadBook/',views.uploadBook,name='uploadBook'),
     path('deleteBook/<int:user_id>/<str:book_name>/',views.deleteBook,name='deleteBook'),
-    path('book/<int:book_id>',views.getBook,name='getBook')
+    path('book/<int:book_id>',views.getBook,name='getBook'),
+    path('userBooks/<int:user_id>',views.getUserBooks,name='getUserBooks')
 ]

@@ -1,0 +1,53 @@
+<section class="text-center">
+    <div class="p-5 bg-image" style="
+          background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+          height: 300px;
+        "></div>
+  
+    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+          margin-top: -100px;
+          background: hsla(0, 0%, 100%, 0.8);
+          backdrop-filter: blur(30px);
+        ">
+      <div class="card-body py-5 px-md-5">
+  
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="fw-bold mb-5">העלאת ספר</h2>
+            <form (ngSubmit)="onSubmit()" #uploadForm="ngForm">
+              <div class="row">
+                <div class="form-outline">
+                    <input type="text" id="ownerEmail" class="form-control" [(ngModel)]="data.owner_email" name="ownerEmail"/>
+                    <label class="form-label" for="ownerEmail">אימייל בעל הספר</label>
+                  </div>
+                <div class="form-outline">
+                  <input type="text" id="bookName" class="form-control" [(ngModel)]="data.book_name" name="bookName"/>
+                  <label class="form-label" for="bookName">שם הספר</label>
+                </div>
+                <div class="form-outline">
+                  <input type="text" id="authorName" class="form-control" [(ngModel)]="data.author_name" name="authorName"/>
+                  <label class="form-label" for="authorName">שם המחבר</label>
+                </div>
+                <div class="form-outline">
+                  <select id="bookType" class="form-select" [(ngModel)]="data.book_type" name="bookType">
+                    <option value="Borrow">השאלה</option>
+                    <option value="Sell">מכירה</option>
+                  </select>
+                  <label class="form-label" for="bookType">סוג הספר</label>
+                </div>
+                <div *ngIf="data.book_type === 'Sell'" class="form-outline">
+                  <input type="number" id="price" class="form-control" [(ngModel)]="data.price" name="price"/>
+                  <label class="form-label" for="price">מחיר</label>
+                </div>
+              </div>
+  
+              <button type="submit" class="btn btn-primary btn-block mb-4">
+                העלה ספר
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

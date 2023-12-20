@@ -21,6 +21,11 @@ export class LogPageComponent implements OnInit{
     this.http.get(url).subscribe(
       (response: any) => {
         if (response && response['user_exist']) {
+          sessionStorage.setItem('user_name',response['user'].user_name)
+          sessionStorage.setItem('email',response['user'].email)
+          sessionStorage.setItem('id',response['user'].id)
+          sessionStorage.setItem('password',response['user'].password)
+          sessionStorage.setItem('id_admin',response['user'].id_admin)
           this.router.navigate(['/home']);
         } else {
           alert('Failed to connect. Please try again.');

@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from rest_framework import serializers
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from django.shortcuts import get_object_or_404
-from .serializers import borrowBookSerializers , sellBookSerializers
-from .models import borrowBook , sellBook
+from .serializers import borrowBookSerializers, sellBookSerializers
+from .models import borrowBook, sellBook
 from users.models import User
 
 
@@ -24,7 +24,7 @@ def uploadBook(request):
 
         if serializer.is_valid(raise_exception=True):
             serializer.save()
-            return Response(serializer.data)
+            return Response({'book_created': True, 'data': serializer.data}, status=200)
         
 @api_view(['DELETE'])
 def deleteBook(request,user_id,book_name):
@@ -48,3 +48,13 @@ def getBook(request,book_id):
 
     return Response(serializer.data)
 
+@api_view(['GET'])
+def getUserBooks(request,user_id):
+    user = get_object_or_404(User, id=user_id)
+    borrowBooks = borrowBook.objects.filter(user=user)
+    sellBooks = sellBook.objects.filter(user=user)
+
+    borrowBooksData = borrowBookSerializers(borrowBooks, many=True).data
+    sellBooksData = sellBookSerializers(sellBooks, many=True).data
+
+    return Response({'borrow_books':borrowBooksData,'sell_books':sellBooksData},status=200)

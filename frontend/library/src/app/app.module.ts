@@ -12,6 +12,8 @@ import { SingUpComponent } from './sing-up/sing-up.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BookCardComponent } from './book-card/book-card.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { PersonalAreaComponent } from './personal-area/personal-area.component';
+import { UploadBooksComponent } from './upload-books/upload-books.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { BookDetailsComponent } from './book-details/book-details.component';
     SingUpComponent,
     NavbarComponent,
     BookCardComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    PersonalAreaComponent,
+    UploadBooksComponent,
   ],
   imports: [
     BrowserModule,

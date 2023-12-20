@@ -4,8 +4,12 @@ import { LogPageComponent } from './log-page/log-page.component';
 import { SingUpComponent } from './sing-up/sing-up.component';
 import { HomeComponent } from './home/home.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { PersonalAreaComponent } from './personal-area/personal-area.component';
+import { UploadBooksComponent } from './upload-books/upload-books.component';
 
 const routes: Routes = [
+  { path: 'upload-books', component:UploadBooksComponent},
+  { path: 'personal-area', component:PersonalAreaComponent},
   { path: 'book-details/:id', component: BookDetailsComponent },
   { path: 'home', component: HomeComponent},
   { path: 'login', component: LogPageComponent },
