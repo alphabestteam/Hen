@@ -26,5 +26,7 @@ def get_user(request,email,password):
         serializer = UserSerializer(users)
         return Response({'user_exist':True,'user':serializer.data},status=200)
     elif request.method == 'DELETE':
-        pass
+        user = get_object_or_404(User,email=email)
+        user.delete()
+        return Response({'user_deleted': True,"message": "user deleted successfully"})
 

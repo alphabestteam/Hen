@@ -1,0 +1,25 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12">
+          <div class="card-deck">
+            <h1>משתמשים</h1>
+            <div class="row">
+              <div class="col-md-4" *ngFor="let user of users">
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ user.user_name }}</h5>
+                    <p class="card-text">ID: {{ user.id }}</p>
+                    <p class="card-text">Email: {{ user.email }}</p>
+  
+                    <button class="btn btn-danger" (click)="deleteUser(user.email,user.password)">מחיקה</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
