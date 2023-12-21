@@ -16,6 +16,7 @@ import { PersonalAreaComponent } from './personal-area/personal-area.component';
 import { UploadBooksComponent } from './upload-books/upload-books.component';
 import { UpdateBookComponent } from './update-book/update-book.component';
 import { UsersCardsComponent } from './users-cards/users-cards.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { UsersCardsComponent } from './users-cards/users-cards.component';
     UploadBooksComponent,
     UpdateBookComponent,
     UsersCardsComponent,
+    ReviewsComponent,
   ],
   imports: [
     BrowserModule,

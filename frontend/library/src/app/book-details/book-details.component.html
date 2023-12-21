@@ -3,9 +3,10 @@
     <h2>{{ book.book_name }}</h2>
     <p>Author: {{ book.owner_email }}</p>
     <p>Author: {{ book.author_name }}</p>
-    <p>Author: {{ book.book_type }}</p>
+    <p>Type: {{ book.book_type }}</p>
     <div *ngIf="hasPriceField(book)">
         <p>Price: {{ book.price }}</p>
     </div>
 </div>
   
+<app-reviews  [bookType]="book?.book_type"></app-reviews>

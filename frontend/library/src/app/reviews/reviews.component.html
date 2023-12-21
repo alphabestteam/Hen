@@ -1,0 +1,13 @@
+<h1>what people think about your {{bookType}} book</h1>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12" *ngFor="let review of reviews">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">{{ review.comment }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
