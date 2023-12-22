@@ -1,5 +1,6 @@
-<h1>what people think about your {{bookType}} book</h1>
-<div class="container">
+<div class="container text-center">
+    <h1 class="mb-4">What people think about your {{ bookName }} book</h1>
+    <button  (click)="addReview()" class="btn btn-primary mb-4">Add Review</button>
     <div class="row">
       <div class="col-md-12" *ngFor="let review of reviews">
         <div class="card mb-4">

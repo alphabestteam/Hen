@@ -7,9 +7,11 @@ import { BookDetailsComponent } from './book-details/book-details.component';
 import { PersonalAreaComponent } from './personal-area/personal-area.component';
 import { UploadBooksComponent } from './upload-books/upload-books.component';
 import { UpdateBookComponent } from './update-book/update-book.component';
+import { PostReviewComponent } from './post-review/post-review.component';
 
 
 const routes: Routes = [
+  { path: 'post-review/:bookId/:bookType', component:PostReviewComponent},
   { path: 'update-books/:id', component:UpdateBookComponent},
   { path: 'upload-books', component:UploadBooksComponent},
   { path: 'personal-area', component:PersonalAreaComponent},

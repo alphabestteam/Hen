@@ -17,6 +17,7 @@ import { UploadBooksComponent } from './upload-books/upload-books.component';
 import { UpdateBookComponent } from './update-book/update-book.component';
 import { UsersCardsComponent } from './users-cards/users-cards.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { PostReviewComponent } from './post-review/post-review.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
     UpdateBookComponent,
     UsersCardsComponent,
     ReviewsComponent,
+    PostReviewComponent,
   ],
   imports: [
     BrowserModule,

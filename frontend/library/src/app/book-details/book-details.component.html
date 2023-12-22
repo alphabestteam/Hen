@@ -1,12 +1,16 @@
 <app-navbar></app-navbar>
-<div *ngIf="book">
-    <h2>{{ book.book_name }}</h2>
-    <p>Author: {{ book.owner_email }}</p>
-    <p>Author: {{ book.author_name }}</p>
-    <p>Type: {{ book.book_type }}</p>
-    <div *ngIf="hasPriceField(book)">
-        <p>Price: {{ book.price }}</p>
-    </div>
-</div>
+<div *ngIf="book" class="card text-center">
+    <div class="card-body">
+      <h2 class="card-title">{{ book?.book_name }}</h2>
+      <p class="card-text">Author: {{ book?.owner_email }}</p>
+      <p class="card-text">Author: {{ book?.author_name }}</p>
+      <p class="card-text">Type: {{ book?.book_type }}</p>
+      <p class="card-text">Total Reviews: {{sumReview}}</p>
   
-<app-reviews  [bookType]="book?.book_type"></app-reviews>
+      <div *ngIf="hasPriceField(book)" class="card-text">
+        <p>Price: {{ book?.price }}</p>
+      </div>
+    </div>
+  </div>
+  
+<app-reviews  [bookName]="book?.book_name"  [bookType]="book?.book_type" (sumOfReview)="sumOfReviews($event)"></app-reviews>

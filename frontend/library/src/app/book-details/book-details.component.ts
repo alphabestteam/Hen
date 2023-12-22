@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class BookDetailsComponent {
   constructor(private http:HttpClient,private route: ActivatedRoute) {}
   book:any
+  sumReview: number = 0;
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -33,5 +34,10 @@ export class BookDetailsComponent {
 
   hasPriceField(book: any): boolean {
     return 'price' in book;
+  }
+
+  sumOfReviews(data: number): void {
+    this.sumReview = data;
+    console.log('Data from ReviewsComponent:', data);
   }
 }
