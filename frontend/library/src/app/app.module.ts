@@ -18,6 +18,7 @@ import { UpdateBookComponent } from './update-book/update-book.component';
 import { UsersCardsComponent } from './users-cards/users-cards.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { PostReviewComponent } from './post-review/post-review.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { PostReviewComponent } from './post-review/post-review.component';
     UsersCardsComponent,
     ReviewsComponent,
     PostReviewComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
