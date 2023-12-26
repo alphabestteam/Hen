@@ -1,4 +1,38 @@
+body{
+  background-image: url('../../assets/images/pngtree-an-old-bookcase-in-a-library-image_2642908.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  border: 1px solid #dee2e6;
+  border-radius: 0.75rem;
+  transition: transform 0.2s;
+  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.text-center{
+  color: white;
+}
+
 .card:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
-  }
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+.card-title{
+  font-size: 1.5rem;
+  color: white;
+}
+hr{
+  color: white;
+}
+.card-text{
+  color: white;
+}
+

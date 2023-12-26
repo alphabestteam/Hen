@@ -3,12 +3,14 @@
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12">
           <div class="card-deck">
-            <h1>משתמשים</h1>
+            <h1 class="title">משתמשים</h1>
+            <hr>
             <div class="row">
               <div class="col-md-4" *ngFor="let user of users">
                 <div class="card mb-4">
                   <div class="card-body">
                     <h5 class="card-title">{{ user.user_name }}</h5>
+                    <hr>
                     <p class="card-text">ID: {{ user.id }}</p>
                     <p class="card-text">Email: {{ user.email }}</p>
   

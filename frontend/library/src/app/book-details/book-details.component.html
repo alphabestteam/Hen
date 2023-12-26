@@ -1,8 +1,10 @@
-<app-navbar></app-navbar>
-<div *ngIf="book" class="card text-center">
+<body class="vh-100">
+  <app-navbar></app-navbar> 
+<div *ngIf="book" class="card text-left">
     <div class="card-body">
       <h2 class="card-title">{{ book?.book_name }}</h2>
-      <p class="card-text">Author: {{ book?.owner_email }}</p>
+      <hr>
+      <p class="card-text">Email: {{ book?.owner_email }}</p>
       <p class="card-text">Author: {{ book?.author_name }}</p>
       <p class="card-text">Type: {{ book?.book_type }}</p>
       <p class="card-text">Total Reviews: {{sumReview}}</p>
@@ -14,3 +16,4 @@
   </div>
   
 <app-reviews  [bookName]="book?.book_name"  [bookType]="book?.book_type" (sumOfReview)="sumOfReviews($event)"></app-reviews>
+</body>

@@ -1,4 +1,6 @@
 <app-navbar></app-navbar>
+<body >
+    
 
 <section class="vh-100 gradient-custom">
     <div class="container py-5 h-100">
@@ -6,11 +8,13 @@
             <div class="col-12">
                 <div class="card-deck">
                     <h1 class="text-center">ספרים להשאלה</h1>
+                    <hr>
                     <div class="row">
                         <div class="col-md-4" *ngFor="let book of borrowBooks">
                             <div class="card mb-4 shadow">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ book.book_name }}</h5>
+                                    <hr>
                                     <p class="card-text">By {{ book.author_name }} (Type: {{ book.book_type }})</p>
                                     <p class="card-text">email {{ book.owner_email }} </p>
                                     <button class="btn btn-danger" (click)="deleteBook(book.id)">מחיקה</button>
@@ -21,11 +25,13 @@
                     </div>
 
                     <h1 class="text-center">ספרים למכירה</h1>
+                    <hr>
                     <div class="row">
                         <div class="col-md-4" *ngFor="let book of sellBooks">
                             <div class="card mb-4 shadow">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ book.book_name }}</h5>
+                                    <hr>
                                     <p class="card-text">By {{ book.author_name }} (Type: {{ book.book_type }})</p>
                                     <p class="card-text">Price: {{ book.price }}</p>
                                     <button class="btn btn-danger" (click)="deleteBook(book.id)">מחיקה</button>
@@ -41,5 +47,6 @@
 </section>
 
 <app-users-cards></app-users-cards>
-
 <app-footer></app-footer>
+</body>
+

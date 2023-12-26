@@ -17,27 +17,27 @@
             <form (ngSubmit)="onSubmit()" #uploadForm="ngForm">
               <div class="row">
                 <div class="form-outline">
+                  <label class="form-label" for="ownerEmail">אימייל בעל הספר</label>
                     <input type="text" id="ownerEmail" class="form-control" [(ngModel)]="data.owner_email" name="ownerEmail"/>
-                    <label class="form-label" for="ownerEmail">אימייל בעל הספר</label>
                   </div>
                 <div class="form-outline">
-                  <input type="text" id="bookName" class="form-control" [(ngModel)]="data.book_name" name="bookName"/>
                   <label class="form-label" for="bookName">שם הספר</label>
+                  <input type="text" id="bookName" class="form-control" [(ngModel)]="data.book_name" name="bookName"/>
                 </div>
                 <div class="form-outline">
-                  <input type="text" id="authorName" class="form-control" [(ngModel)]="data.author_name" name="authorName"/>
                   <label class="form-label" for="authorName">שם המחבר</label>
+                  <input type="text" id="authorName" class="form-control" [(ngModel)]="data.author_name" name="authorName"/>
                 </div>
                 <div class="form-outline">
+                  <label class="form-label" for="bookType">סוג הספר</label>
                   <select id="bookType" class="form-select" [(ngModel)]="data.book_type" name="bookType">
                     <option value="Borrow">השאלה</option>
                     <option value="Sell">מכירה</option>
                   </select>
-                  <label class="form-label" for="bookType">סוג הספר</label>
                 </div>
                 <div *ngIf="data.book_type === 'Sell'" class="form-outline">
-                  <input type="number" id="price" class="form-control" [(ngModel)]="data.price" name="price"/>
                   <label class="form-label" for="price">מחיר</label>
+                  <input type="number" id="price" class="form-control" [(ngModel)]="data.price" name="price"/>
                 </div>
               </div>
   

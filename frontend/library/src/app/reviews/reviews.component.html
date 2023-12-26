@@ -1,11 +1,12 @@
 <div class="container text-center">
-    <h1 class="mb-4">What people think about your {{ bookName }} book</h1>
-    <button  (click)="addReview()" class="btn btn-primary mb-4">Add Review</button>
+    <h1 class="mb-4 title">What people think about your {{ bookName }} book</h1>
+    <hr>
+    <button  (click)="addReview()" class="btn btn-primary mb-4">הוסף חוות דעת</button>
     <div class="row">
       <div class="col-md-12" *ngFor="let review of reviews">
         <div class="card mb-4">
           <div class="card-body">
-            <h5 class="card-title">{{ review.comment }}</h5>
+            <h5 class="card-title">"{{ review.comment }}"</h5>
           </div>
         </div>
       </div>

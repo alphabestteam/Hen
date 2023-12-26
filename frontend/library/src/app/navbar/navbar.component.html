@@ -1,25 +1,26 @@
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <p class="navbar-brand">Welcome, {{ user_name }}!</p>
-  
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/home">בית</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/personal-area">איזור אישי</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/upload-books">העלאת ספרים</a>
-          </li>
-        </ul>
-      </div>
+    <div class="container d-flex justify-content-between align-items-center">
+        <div>
+            <p class="navbar-brand mb-0">Welcome, {{ user_name }}!</p>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav items ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">בית</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/personal-area">איזור אישי</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/upload-books">העלאת ספרים</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </nav>
-  
+</nav>
