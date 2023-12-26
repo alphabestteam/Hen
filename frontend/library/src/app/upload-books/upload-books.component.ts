@@ -17,7 +17,6 @@ export class UploadBooksComponent {
     author_name: '',
     user: sessionStorage.getItem('id'),
     book_type: '',
-    // price: 0,
   };
   onSubmit(){
     this.http.post("http://localhost:8000/uploadBook/", this.data).subscribe(

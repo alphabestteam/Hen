@@ -11,7 +11,6 @@ export class SingUpComponent {
 
   constructor(private http:HttpClient,private router: Router){}
   data: any = {
-    id: 0,
     user_name: '',
     email: '',
     password: ''

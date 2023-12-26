@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class BookCardComponent {
   books: any[] = [];
+  filteredBooks: any[] = [];
+  searchQuery: string = '';
 
   constructor(private http:HttpClient,private router: Router){}
 
@@ -20,6 +22,7 @@ export class BookCardComponent {
     this.http.get<any[]>('http://localhost:8000/uploadBook').subscribe(
       (response) => {
         this.books = response;
+        this.filteredBooks = response
       },
       (error) => {
         console.error('Error fetching books:', error);
@@ -29,6 +32,16 @@ export class BookCardComponent {
 
   navigateToBookDetails(bookId: number) {
     this.router.navigate(['/book-details', bookId]);
+  }
+
+  filterBooks():void{
+    if (this.searchQuery.trim() === '') {
+      this.filteredBooks = this.books;
+    } else {
+      this.filteredBooks = this.books.filter(book =>
+        book.book_name.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
+    }
   }
 
 }

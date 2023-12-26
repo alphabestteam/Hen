@@ -26,4 +26,15 @@
   .card-text{
     color: white;
   }
-
+.search-bar{
+  margin-left: 35%;
+  width: 30%;
+  background-color: rgba(181, 148, 148, 0.306);
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 12px;
+}
+.search-bar::placeholder{
+  color: white;
+}

@@ -17,10 +17,6 @@
             <form (ngSubmit)="onSubmit()" #uploadForm="ngForm">
               <div class="row">
                 <div class="form-outline">
-                  <label class="form-label" for="ownerEmail">אימייל בעל הספר</label>
-                    <input type="text" id="ownerEmail" class="form-control" [(ngModel)]="data.owner_email" name="ownerEmail"/>
-                  </div>
-                <div class="form-outline">
                   <label class="form-label" for="bookName">שם הספר</label>
                   <input type="text" id="bookName" class="form-control" [(ngModel)]="data.book_name" name="bookName"/>
                 </div>
@@ -40,7 +36,6 @@
                   <input type="number" id="price" class="form-control" [(ngModel)]="data.price" name="price"/>
                 </div>
               </div>
-  
               <button type="submit" class="btn btn-primary btn-block mb-4">
                 העלה ספר
               </button>
